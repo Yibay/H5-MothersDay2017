@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>妈妈，谢谢您</title>
+    <link rel="stylesheet" type="text/css" href="./public/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="./public/css/index.css" />
+    <!-- fullPage滚屏功能 -->
+    <script src="./public/libs/jquery.min.js"></script>
+    <script src="./public/libs/jquery.fullpage.min.js"></script>
+    <!-- react组件功能 -->
+    <script src="./public/libs/react.min.js"></script>
+    <script src="./public/libs/react-dom.min.js"></script>
+    <!-- browser不支持本地拆分type为babel的js文件 -->
+    <script src="./public/libs/browser.min.js"></script>
+    <!-- 手势功能 -->
+    <script src="./public/libs/hammer.min.js"></script>
+  </head>
+  <body>
+  	<img style="position: absolute;top: -1000em;" src="./public/images/thanksMom.jpg" data-original-image="static/H5Resource/7xStory/images/page5/page5bg.png" />
+
+    <!-- loading页 -->
+    <script src="./public/js/loading.js"></script>
+    <script src="./public/js/loading-config.js"></script>
+	<!-- 声音开关 -->
+	<div id="sound"></div>
+    <!-- 背景音乐: 声音控制要放在前面，因为轮播、视频、详情页组件 都要对声音进行控制。同时接loading后，便于快速触发自动播放 -->
+    <script src="./public/js/music-controller.js"></script>
+    <!-- 输入年龄页 -->
+    <div id="enter-age">
+    	<div class="mum"></div>
+    	<div class="title"></div>
+    	<input id="your-age" type="number" placeholder="请输入你的年龄" />
+    	<button id="submit"></button>
+		<!-- 调整视窗大小，防止弹出输入面板，样式变更 -->
+		<script src="./public/js/change-screen.js"></script>
+    	<!-- 计算年龄: 计算年龄结果，要被轮播、详情页组件 引用 -->
+    	<script src="./public/js/calculate.js"></script>
+    </div>
+    <!-- 轮播场景页 -->
+  	<div id="dowebok">
+	    <div class="section scene-livingRoom">
+	    	<div class="window"></div>
+	    	<div class="point1-hide photo"></div>
+	    	<div class="point1-show photo-active"></div>
+	    	<div class="clock"></div>
+	    	<div class="point1-hide cabinet"></div>
+	    	<div class="point1-show cabinet-active"></div>
+	    	<div class="tree"></div>
+	    	<div class="sofa"></div>
+	    	<div class="cat"></div>
+	    	<div class="point1-hide book"></div>
+	    	<div class="bin"></div>
+	    	<div class="point2-hide rubbish"></div>
+	    	<div class="point1-hide word1"></div>
+	    	<div class="point2-hide word2"></div>
+	    	<div class="point3-hide word3"></div>
+	    	<div class="point1-hide point1">1</div>
+	    	<div class="point2-hide point2">2</div>
+	    	<div class="point3-hide point3">3</div>
+	    	<div class="touch1"></div>
+	    	<div class="touch2"></div>
+	    	<div class="touch3"></div>
+	    </div>
+	    <div class="section scene-kitchen">
+	    	<div class="food"></div>
+	    	<div class="cup"></div>
+	    	<div class="point1-show bowl-active"></div>
+	    	<div class="light"></div>
+	    	<div class="light-active"></div>
+	    	<div class="point1-hide flow"></div>
+	    	<div class="basket"></div>
+	    	<div class="point1-hide word1"></div>
+	    	<div class="point2-hide word2"></div>
+	    	<div class="point3-hide word3"></div>
+	    	<div class="point1-hide point1">1</div>
+	    	<div class="point2-hide point2">2</div>
+	    	<div class="point3-hide point3">3</div>
+	    	<div class="touch1"></div>
+	    	<div class="touch2"></div>
+	    	<div class="touch3"></div>
+	    </div>
+	    <div class="section scene-bedroom">
+	    	<div class="sky"></div>
+	    	<div class="clothes"></div>
+	    	<div class="bg"></div>
+	    	<div class="bed"></div>
+	    	<div class="shelf"></div>
+	    	<div class="plant"></div>
+	    	<div class="point1-hide clock"></div>
+	    	<div class="point1-show clock-active"></div>
+	    	<div class="point3-hide basket"></div>
+	    	<div class="point1-hide word1"></div>
+	    	<div class="point2-hide word2"></div>
+	    	<div class="point3-hide word3"></div>
+	    	<div class="point1-hide point1">1</div>
+	    	<div class="point2-hide point2">2</div>
+	    	<div class="point3-hide point3">3</div>
+	    	<div class="touch1"></div>
+	    	<div class="touch2"></div>
+	    	<div class="touch3"></div>
+	    </div>
+	    <div id="scene-total" class="section scene-total">
+	    	<div class="heart"></div>
+	    	<button id="share"></button>
+	    	<div class="video-box">
+		    	<video id="video" x-webkit-airplay="true" webkit-playsinline="true" playsinline="true">
+		    		<source src="http://hugehuge.oss-cn-hangzhou.aliyuncs.com/static/H5Resource/motherday2017/video/movie.mp4" />
+		    	</video>
+		    	<div class="poster"></div>
+	    	</div>
+	    </div>
+	</div>
+	<div class="share"></div>
+	<div class="share-heart"></div>
+    <!-- 视频控制：在轮播控制前，因为轮播要控制视频 -->
+    <script src="./public/js/video-controller.js"></script>
+    <div id="arrow"></div>
+	<!-- 初始化轮播 -->
+    <script src="./public/js/fullpage-config.js"></script>
+	<!-- 详情页 -->
+    <div id="DetailPage"></div>
+    <script type="text/babel">
+    /*<![CDATA[*/
+    //详情页组件
+
+	//封装组件
+	var DetailPage = (function(){
+
+	    // 详情页组件
+	    var DetailPage = React.createClass({
+
+	    	getInitialState: function(){
+	    		return {
+	    			//存放文字数组
+	    			textDescription: [],
+	    			//存放手势对象
+	    			hammerTime: null
+	    		}
+	    	},
+
+			render: function(){
+
+				return(
+					// react中，通过 ref属性 获取真实 dom节点
+					<div ref="root" style={DetailPageStyle.container} className={this.props.className}>
+						{/* React加载帧动画背景图时，有时会 重新发请求下载，造成动画闪烁。
+							所以加个前景层。背景层动画比前景慢一帧。当前景掉帧时，背景做底。消除闪烁
+						 */}
+						<div style={DetailPageStyle.foreground} className="foreground">
+							{this.state.textDescription}
+						</div>
+						{/*动画手势*/}
+						<div className="gesture"></div>
+					</div>
+				);
+			},
+
+			//组件dom渲染完成后（此时，可以在dom上绑定原生事件）
+			componentDidMount: function(){
+				// 绑定捏事件
+				this._addPinchEvent();
+				// 触发展示文字动画
+				this._showText();
+				// 执行回调函数
+				this.props.cb && this.props.cb();
+			},
+
+			//卸载组件前（此时，要解绑 dom上绑定原生事件）
+			componentWillUnmount: function(){
+				// 执行回调函数
+				this.props.cb2 && this.props.cb2();
+				// 解绑捏事件
+				this._removePinchEvent();
+				console.log("完成卸载组件");
+			},
+
+			//向DetailPage组件中，不断追加text
+			_showText: function(){
+
+				var textDescription = this.props.textDescription;
+				var len = textDescription.length;
+				var i=0;
+				var showText = setInterval((function(){
+					if(i<len){
+						var currentTextDescription = this.state.textDescription;
+						//如果是字符串
+						if (typeof textDescription[i] === "string"){
+							//有 <br/>
+							if(textDescription[i].indexOf("<br/>") !== -1){
+								//将<br/> 分段，换行
+								let merge = textDescription[i].split("<br/>");
+								let new_textDescription = merge.map(function(item, index, array){
+									return (<p style={DetailPageStyle.typeface}>{item}</p>);
+								});
+								// 整个数组存入<p>
+								currentTextDescription.push(
+									<p style={DetailPageStyle.typeface}>
+										{new_textDescription}
+									</p>
+								);
+							}
+							//无 <br/>
+							else{
+								//直接存入 <p>中
+								currentTextDescription.push(
+									<p style={DetailPageStyle.typeface}>
+										{textDescription[i]}
+									</p>
+								);
+							}
+						}
+						//如果是数组
+						else if(textDescription[i] instanceof Array && textDescription[i].length > 0){
+							let textArray_i = textDescription[i];
+							let new_textDescription = textArray_i.map(function(item, index, array){
+								//子项字符串，直接存入
+								if (typeof item === "string"){
+									return item;
+								}
+								//子项数字，包裹存入
+								else if (typeof item === "number"){
+									return <span>{item}</span>;
+								}
+
+							});
+							//整个数组存入 <p>中
+							currentTextDescription.push(
+								<p style={DetailPageStyle.typeface}>
+									{new_textDescription}
+								</p>
+							);
+						}
+						this.setState({textDescription: currentTextDescription});
+						i++;
+					}
+					else{
+						clearInterval(showText);
+					}
+				}).bind(this),1000);
+			},
+
+			//为DetailPage组件，绑定手势事件
+			_addPinchEvent: function(){
+				var _self = this;
+
+				this.setState({
+					//react中，通过 ref属性 获取真实dom节点
+					hammerTime: new Hammer( this.refs.root )
+				});
+				//setState设置属性需要时间，加个setTimeout，则等同于then()方法
+				setTimeout(function(){
+					// 为该 hammerTime 添加 识别实例“捏”
+					_self.state.hammerTime.add(new Hammer.Pinch());
+					// 绑定“捏”事件
+					_self.state.hammerTime.on("pinchin", function () {
+						console.log("开始卸载组件");
+						_self._unmountComponentAtNode();
+					});
+				},0);
+			},
+
+			//为DetailPage组件，解绑手势事件
+			_removePinchEvent: function(){
+				console.log("移除事件");
+				// 绑定“捏”事件
+				this.state.hammerTime.off("pinchin");
+			},
+
+			//移除根组件
+			_unmountComponentAtNode: function(){
+				//从 根组件节点 的父节点 移除根组件
+				ReactDOM.unmountComponentAtNode( this.refs.root.parentNode );
+			}
+
+		});
+	    // 详情页样式
+		var DetailPageStyle = {
+			foreground: {
+				position: "absolute",
+				top: 0,
+				left: 0,
+				width: "100vw",
+				height: "100vh",
+				boxSizing: "border-box"
+			},
+			container: {
+				position: "fixed",
+				top: 0,
+				left: 0,
+				width: "100vw",
+				height: "100vh",
+				boxSizing: "border-box"
+			},
+			typeface: {
+				margin: 0,
+				fontFamily: "汉仪小麦简",
+				fontSize: "5vw",
+				lineHeight: "1.5em"
+			}
+		};
+
+		return DetailPage;
+
+	})();
+	
+	//渲染详情页组件
+	function renderDetailPage (text_data, className, cb, cb2){
+		ReactDOM.render(
+			//参数1：文字；参数2：背景层className
+	        <DetailPage textDescription={text_data} className={className} cb={cb} cb2={cb2} />,
+	        document.getElementById('DetailPage')
+	    );
+	}
+
+	// 详情页开启时回调函数
+	function changeScenne (hide_array, show_array, cb){
+		return function(){
+			if(hide_array){
+				hide_array.forEach(function(item, index, array){
+					item.hide();
+				});
+			}
+			if(show_array){
+				show_array.forEach(function(item, index, array){
+					item.show();
+				});
+			}
+			cb && cb();
+		}
+	}
+
+	//绑定详情页 入口事件
+
+	$(".scene-livingRoom .touch1").on("click", function(){
+		//参数形式：["aaa","vvv",["sss",123,"fff"]],数组里面套数组，如果typeof为数组，则遍历数组，构造["sss",<span>123</span>,"fff"]
+		renderDetailPage(["只有你，<br/>对家里每个物品的位置都了如指掌。",[data.livingRoom_point1[0],"年，妈妈整理的杂物超过",data.livingRoom_point1[1],"件，"],["这花费了她",data.livingRoom_point1[2],"小时"]], 
+			"scene-livingRoom-scene1", 
+			changeScenne([$(".scene-livingRoom .point1-hide")], [$(".scene-livingRoom .point1-show")],function(){music.cat.pause();}),
+			function(){music.cat.currentTime = 0;music.cat.play();}
+		);
+	});
+
+	$(".scene-livingRoom .touch2").on("click", function(){
+		renderDetailPage(["十几平米，<br/>磨光了多少扫把，又熬白了多少黑发",[data.livingRoom_point2[0],"年，妈妈清扫面积超过",data.livingRoom_point2[1],"平方，"],["这花费了她",data.livingRoom_point2[2],"小时"]], 
+			"scene-livingRoom-scene2", 
+			changeScenne([$(".scene-livingRoom .point2-hide")], [$(".scene-livingRoom .point2-show")],function(){music.sweep.play();music.cat.pause();}),
+			function(){music.sweep.pause();music.cat.currentTime = 0;music.cat.play();}
+		);
+	});
+
+	$(".scene-livingRoom .touch3").on("click", function(){
+		renderDetailPage(["你总能在不经意间<br/>让家里的垃圾消失",[data.livingRoom_point3[0],"年，妈妈处理超过",data.livingRoom_point3[1],"千克垃圾，"],["这花费了她",data.livingRoom_point3[2],"小时"]], 
+			"scene-livingRoom-scene3", 
+			changeScenne([$(".scene-livingRoom .point3-hide")], [$(".scene-livingRoom .point3-show")], function(){music.wind.play();music.bird.play();music.cat.pause();}),
+			function(){music.wind.pause();music.bird.pause();music.cat.currentTime = 0;music.cat.play();}
+		);
+	});
+
+	$(".scene-kitchen .touch1").on("click", function(){
+		renderDetailPage(["每一次的洗刷<br/>都是对家人的保护",[data.kitchen_point1[0],"年，妈妈清洗",data.kitchen_point1[1],"双碗筷，"],["这花费了她",data.kitchen_point1[2],"小时！"]], 
+			"scene-kitchen-scene1", 
+			changeScenne([$(".scene-kitchen .point1-hide")], [$(".scene-kitchen .point1-show")],function(){music.wash.play();}),
+			function(){music.wash.pause();music.water_closed = true;music.water.pause();}
+		);
+	});
+
+	$(".scene-kitchen .touch2").on("click", function(){
+		renderDetailPage(["风雨无阻，<br/>去菜场的这条路很短却很孤单",[data.kitchen_point2[0],"年，妈妈买菜走过的路程超过",data.kitchen_point2[1],"公里，"],["这花费了她",data.kitchen_point2[2],"小时"]], 
+			"scene-kitchen-scene2", 
+			changeScenne([$(".scene-kitchen .point2-hide")], [$(".scene-kitchen .point2-show")], function(){music.rain.play();}),
+			function(){music.rain.pause();}
+		);
+	});
+
+	$(".scene-kitchen .touch3").on("click", function(){
+		renderDetailPage(["每次回家，<br/>最隆重的爱就是满满的一桌子饭菜。",[data.kitchen_point3[0],"年，妈妈做了超过",data.kitchen_point3[1],"顿饭，"],["这花费了她",data.kitchen_point3[2],"小时"]], 
+			"scene-kitchen-scene3", 
+			changeScenne([$(".scene-kitchen .point3-hide")], [$(".scene-kitchen .point3-show")])
+		);
+	});
+
+	$(".scene-bedroom .touch1").on("click", function(){
+		renderDetailPage(["你的唠叨我不是没听到<br/>我只是喜欢这种热闹",[data.bedroom_point1[0],"年，妈妈叫你起床超过",data.bedroom_point1[1],"次，"],["这花费了她",data.bedroom_point1[2],"小时"]], 
+			"scene-bedroom-scene1", 
+			changeScenne([$(".scene-bedroom .point1-hide")], [$(".scene-bedroom .point1-show")],function(){music.knock.currentTime = 1;music.knock.play();}),
+			function(){music.knock.pause();}
+		);
+	});
+
+	$(".scene-bedroom .touch2").on("click", function(){
+		renderDetailPage(["想你的时候，<br/>就闻闻衣袖，<br/>还是你熟悉的味道",[data.bedroom_point2[0],"年，妈妈洗了超过",data.bedroom_point2[1],"件衣服，"],["这花费了她",data.bedroom_point2[2],"小时"]], 
+			"scene-bedroom-scene2", 
+			changeScenne([$(".scene-bedroom .point2-hide")], [$(".scene-bedroom .point2-show")], function(){music.wind.play();}),
+			function(){music.wind.pause();}
+		);
+	});
+
+	$(".scene-bedroom .touch3").on("click", function(){
+		renderDetailPage(["你说这是习惯，<br/>我不在也会悄悄整理我的衣裳",[data.bedroom_point3[0],"年，妈妈叠的衣服超过",data.bedroom_point3[1],"立方，"],["这花费了她",data.bedroom_point3[2],"小时"]], 
+			"scene-bedroom-scene3", 
+			changeScenne([$(".scene-bedroom .point3-hide")], [$(".scene-bedroom .point3-show")])
+		);
+	});
+	/*]]>*/
+    </script>
+	<script src="./public/js/share.js"></script>
+  </body>
+</html>

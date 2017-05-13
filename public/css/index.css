@@ -1,0 +1,628 @@
+/*字体声明汉仪小麦*/
+@font-face {
+	font-family: "汉仪小麦简";
+	src: url("../font/汉仪小麦体简-subfont.ttf?t=20170510") format("truetype");
+}
+@font-face {
+	font-family: "华康黑体简";
+	src: url("../font/华康黑体简W5-A_0-subfont.ttf?t=20170510") format("truetype");
+}
+/*首页：输入页*/
+#enter-age{
+	position: fixed;z-index: 99;top: 0;left: 0;width: 100vw;height: 100vh;
+	background: url("../images/scene/enter-age/bg.jpg") 0 0/100% 100% no-repeat;
+}
+#enter-age .mum{
+	width: 100%;height: 100%;
+	background: url("../images/scene/enter-age/扫地.gif") 50% 50%/70% 41% no-repeat;
+	opacity: 0.5;
+	-webkit-animation: mum 10s steps(1) infinite both;animation: mum 10s steps(1) infinite both;
+}
+@-webkit-keyframes mum {
+	0%, 100%{background: url("../images/scene/enter-age/扫地.gif") 50% 50%/70% 41% no-repeat;}
+	33%{background: url("../images/scene/enter-age/洗碗2.gif") 50% 50%/54% 41% no-repeat;}
+	66%{background: url("../images/scene/enter-age/买菜.gif")50% 50%/70% 55% no-repeat;}
+}
+@keyframes mum {
+	0%, 100%{background: url("../images/scene/enter-age/扫地.gif") 50% 50%/70% 41% no-repeat;}
+	33%{background: url("../images/scene/enter-age/洗碗2.gif") 50% 50%/54% 41% no-repeat;}
+	66%{background: url("../images/scene/enter-age/买菜.gif")50% 50%/70% 55% no-repeat;}
+}
+#enter-age .title{
+	position: absolute;top: 13%;left: 50%;width: 100%;height: 32vw;
+	-webkit-transform: translateX(-50%);transform: translateX(-50%);
+	background: url("../images/scene/enter-age/一句妈妈.gif") 50% 50%/100% 100% no-repeat;
+}
+#your-age{
+	position: absolute;top: 75%;left: 50%;width: 52%;height: 12vw;
+	-webkit-transform: translateX(-50%);transform: translateX(-50%);
+	background: url("../images/scene/enter-age/填写年龄.png") 50% 50%/100% 100% no-repeat;
+	border: none;outline: none;
+	box-sizing: border-box;font-family: "华康黑体简";font-size: 5.5vw;color: #fff;text-align:center;
+}
+#your-age::-webkit-input-placeholder {
+	padding: 0 10%;font-size: 4.5vw;color: #fff;text-align: left;
+}
+#your-age:-moz-placeholder {
+	color: #fff;
+}
+#your-age::-moz-placeholder {
+	color: #fff;
+}
+#your-age:-ms-input-placeholder {
+	color: #fff;
+}
+#submit {
+	position: absolute;top: 85%;left: 50%;width: 55%;height: 15vw;
+	-webkit-transform: translateX(-50%);transform: translateX(-50%);
+	background: url("../images/scene/enter-age/看看她按钮-初始.png") 50% 50%/100% 100% no-repeat;
+	border: none;outline: none;
+	font-family: "汉仪小麦简";font-size: 4.3vw;color: #fff;text-align: center;
+}
+#submit:active {
+	background: url("../images/scene/enter-age/看看她按钮-按下.png") 50% 50%/100% 100% no-repeat;
+	border: none;
+}
+
+#dowebok {
+	height: 0;
+}
+#sound{
+	position: fixed;z-index: 9;top: 7%;right: 2%;width: 9%;height: 9vw;
+	-webkit-transform: translateX(-50%);transform: translateX(-50%);
+	background: url("../images/scene/开@2x.png") 50% 50%/100% 100% no-repeat;
+}
+#arrow{
+	position: fixed;bottom: 7%;left: 50%;width: 9%;height: 9vw;
+	-webkit-transform: translateX(-50%);transform: translateX(-50%);
+	background: url("../images/scene/指示箭头.gif") 50% 50%/100% 100% no-repeat;
+}
+
+/*场景1: 客厅*/
+.scene-livingRoom {
+	background: url("../images/scene/scene-livingRoom/背景.jpg") 0 0/100% 100% no-repeat;
+}
+.scene-livingRoom .window{
+	position: absolute;top: 15%;right: 0%;width: 30%;height: 22.5%;
+	background: url("../images/scene/scene-livingRoom/窗外.gif") 0 0/100% 100% no-repeat;
+}
+.scene-livingRoom .photo{
+	position: absolute;top: 12%;left: 10%;width: 15%;height: 9%;
+	background: url("../images/scene/scene-livingRoom/合照@2x.png") 0 0/100% 100% no-repeat;
+}
+.scene-livingRoom .photo-active{
+	position: absolute;top: 12%;left: 10%;width: 14%;height: 8%;
+	background: url("../images/scene/scene-livingRoom/合照@2x-正.png") 0 0/100% 100% no-repeat;
+}
+.scene-livingRoom .clock{
+	position: absolute;top: 4%;right: 37%;width: 22%;height: 13%;
+	background: url("../images/scene/scene-livingRoom/时钟.gif") 0 0/100% 100% no-repeat;
+}
+.scene-livingRoom .cabinet{
+	position: absolute;top: 21%;left: 0%;width: 58%;height: 45%;
+	background: url("../images/scene/scene-livingRoom/杂物@2x.png") 0 0/100% 100% no-repeat;
+}
+.scene-livingRoom .cabinet-active{
+	position: absolute;top: 17%;left: 0%;width: 58%;height: 48%;
+	background: url("../images/scene/scene-livingRoom/整理后柜子.png") 0 0/100% 100% no-repeat;
+}
+.scene-livingRoom .tree{
+	position: absolute;bottom: 23%;left: 5%;width: 18%;height: 37%;
+	background: url("../images/scene/scene-livingRoom/植物.gif") 0 0/100% 100% no-repeat;
+}
+.scene-livingRoom .sofa{
+	position: absolute;top: 44.5%;right: 0%;width: 90%;height: 45%;
+	background: url("../images/scene/scene-livingRoom/沙发.png") 0 0/100% 100% no-repeat;
+}
+.scene-livingRoom .cat{
+	position: absolute;bottom: 16%;left: 25%;width: 29%;height: 25vw;
+	background: url("../images/scene/scene-livingRoom/猫.gif") 0 0/100% 100% no-repeat;
+}
+.scene-livingRoom .book{
+	position: absolute;bottom: 20.5%;left: 5%;width: 29%;height: 23.6%;
+	background: url("../images/scene/scene-livingRoom/书@2x.png") 0 0/100% 100% no-repeat;
+}
+.scene-livingRoom .bin{
+	position: absolute;bottom: 11%;right: 0%;width: 13%;height: 34vw;
+	background: url("../images/scene/scene-livingRoom/垃圾桶.gif") 0 0/100% 100% no-repeat;
+}
+.scene-livingRoom .rubbish{
+	position: absolute;bottom: 1%;right: 13%;width: 32%;height: 15vw;
+	background: url("../images/scene/scene-livingRoom/垃圾@2x.png") 0 0/100% 100% no-repeat;
+}
+.scene-livingRoom .word1{
+	position: absolute;top: 20%;left: 4%;width: 70%;height: 4.7%;
+	background: url("../images/scene/scene-livingRoom/柜子文字@2x.png") 0 0/100% 100% no-repeat;
+}
+.scene-livingRoom .word2{
+	position: absolute;bottom: 4%;left: 4%;width: 57%;height: 4%;
+	background: url("../images/scene/scene-livingRoom/扫地文字@2x.png") 0 0/100% 100% no-repeat;
+}
+.scene-livingRoom .word3{
+	position: absolute;bottom: 30%;right: 1%;width: 54%;height: 5%;
+	background: url("../images/scene/scene-livingRoom/垃圾文字@2x.png") 0 0/100% 100% no-repeat;
+}
+.section{
+	position: relative;
+}
+.point1,.point2,.point3{
+	position: absolute;width: 10vw;height: 10vw;border: 0.5vw solid #fff;border-radius: 50%;
+	line-height: 10vw;text-align: center;font-size: 10vw;font-family: "汉仪小麦简";color: #fff;
+}
+.point1-show,.point2-show,.point3-show{
+	display: none;
+}
+.scene-livingRoom .point1{
+    top: 25%;left: 16%;
+}
+.scene-livingRoom .point2{
+	top: 91%;left: 65%;
+}
+.scene-livingRoom .point3{
+	top: 77%;left: 83%;
+}
+.scene-livingRoom .touch1{
+	position: absolute;top: 20%;left: 0%;width: 54%;height: 20%;
+}
+.scene-livingRoom .touch2{
+	position: absolute;bottom: 0%;left: 53%;width: 35%;height: 10%;
+}
+.scene-livingRoom .touch3{
+	position: absolute;bottom: 12%;right: 0%;width: 18%;height: 18%;
+}
+
+.scene-livingRoom-scene1{
+	background: url("../images/detailPage/scene-livingRoom/杂物-0.3S一帧/1.jpg") 0 0/100% 100% no-repeat;
+	-webkit-animation: scene-livingRoom-scene1 1.2s steps(1) 0.3s infinite both;;
+	animation: scene-livingRoom-scene1 1.2s steps(1) 0.3s infinite both;
+}
+.scene-livingRoom-scene1 .foreground{
+    padding: 18% 0 0 5%;
+	background: url("../images/detailPage/scene-livingRoom/杂物-0.3S一帧/1.jpg") 0 0/100% 100% no-repeat;
+	-webkit-animation: scene-livingRoom-scene1 1.2s steps(1) infinite both;;
+	animation: scene-livingRoom-scene1 1.2s steps(1) infinite both;
+}
+@-webkit-keyframes scene-livingRoom-scene1 {
+	0%,100% {background-image: url("../images/detailPage/scene-livingRoom/杂物-0.3S一帧/1.jpg");}
+	25% {background-image: url("../images/detailPage/scene-livingRoom/杂物-0.3S一帧/2.jpg");}
+	50% {background-image: url("../images/detailPage/scene-livingRoom/杂物-0.3S一帧/3.jpg");}
+	75% {background-image: url("../images/detailPage/scene-livingRoom/杂物-0.3S一帧/4.jpg");}
+}
+@keyframes scene-livingRoom-scene1 {
+	0%,100% {background-image: url("../images/detailPage/scene-livingRoom/杂物-0.3S一帧/1.jpg");}
+	25% {background-image: url("../images/detailPage/scene-livingRoom/杂物-0.3S一帧/2.jpg");}
+	50% {background-image: url("../images/detailPage/scene-livingRoom/杂物-0.3S一帧/3.jpg");}
+	75% {background-image: url("../images/detailPage/scene-livingRoom/杂物-0.3S一帧/4.jpg");}
+}
+.scene-livingRoom-scene1 p{
+	color: #263737;
+}
+
+.scene-livingRoom-scene2{
+	background: url("../images/detailPage/scene-livingRoom/扫地-0.3S一帧/1.jpg") 0 0/100% 100% no-repeat;
+	-webkit-animation: scene-livingRoom-scene2 0.9s steps(1) 0.3s infinite both;;
+	animation: scene-livingRoom-scene2 0.9s steps(1) 0.3s infinite both;
+}
+.scene-livingRoom-scene2 .foreground{
+	padding: 6% 0 0 4%;
+	background: url("../images/detailPage/scene-livingRoom/扫地-0.3S一帧/1.jpg") 0 0/100% 100% no-repeat;
+	-webkit-animation: scene-livingRoom-scene2 0.9s steps(1) infinite both;;
+	animation: scene-livingRoom-scene2 0.9s steps(1) infinite both;
+}
+@-webkit-keyframes scene-livingRoom-scene2 {
+	0%,100% {background-image: url("../images/detailPage/scene-livingRoom/扫地-0.3S一帧/1.jpg");}
+	33% {background-image: url("../images/detailPage/scene-livingRoom/扫地-0.3S一帧/2.jpg");}
+	66% {background-image: url("../images/detailPage/scene-livingRoom/扫地-0.3S一帧/3.jpg");}
+}
+@keyframes scene-livingRoom-scene2 {
+	0%,100% {background-image: url("../images/detailPage/scene-livingRoom/扫地-0.3S一帧/1.jpg");}
+	33% {background-image: url("../images/detailPage/scene-livingRoom/扫地-0.3S一帧/2.jpg");}
+	66% {background-image: url("../images/detailPage/scene-livingRoom/扫地-0.3S一帧/3.jpg");}
+}
+.scene-livingRoom-scene2 p{
+	color: #454545;
+}
+
+.scene-livingRoom-scene3{
+	background: url("../images/detailPage/scene-livingRoom/倒垃圾-0.5S/1.jpg") 0 0/100% 100% no-repeat;
+	-webkit-animation: scene-livingRoom-scene3 2s steps(1) 0.5s infinite both;;
+	animation: scene-livingRoom-scene3 2s steps(1) 0.5s infinite both;
+}
+.scene-livingRoom-scene3 .foreground{
+    padding: 7% 5%;
+	background: url("../images/detailPage/scene-livingRoom/倒垃圾-0.5S/1.jpg") 0 0/100% 100% no-repeat;
+	-webkit-animation: scene-livingRoom-scene3 2s steps(1) infinite both;;
+	animation: scene-livingRoom-scene3 2s steps(1) infinite both;
+}
+@-webkit-keyframes scene-livingRoom-scene3 {
+	0%,100% {background-image: url("../images/detailPage/scene-livingRoom/倒垃圾-0.5S/1.jpg");}
+	25% {background-image: url("../images/detailPage/scene-livingRoom/倒垃圾-0.5S/2.jpg");}
+	50% {background-image: url("../images/detailPage/scene-livingRoom/倒垃圾-0.5S/3.jpg");}
+	75% {background-image: url("../images/detailPage/scene-livingRoom/倒垃圾-0.5S/4.jpg");}
+}
+@keyframes scene-livingRoom-scene3 {
+	0%,100% {background-image: url("../images/detailPage/scene-livingRoom/倒垃圾-0.5S/1.jpg");}
+	25% {background-image: url("../images/detailPage/scene-livingRoom/倒垃圾-0.5S/2.jpg");}
+	50% {background-image: url("../images/detailPage/scene-livingRoom/倒垃圾-0.5S/3.jpg");}
+	75% {background-image: url("../images/detailPage/scene-livingRoom/倒垃圾-0.5S/4.jpg");}
+}
+.scene-livingRoom-scene3 p{
+	color: #244945;
+}
+
+/*场景2: 厨房*/
+.scene-kitchen {
+	background: url("../images/scene/scene-kitchen/厨房背景.jpg") 0 0/100% 100% no-repeat;
+}
+.scene-kitchen .cup {
+	position: absolute;bottom: 78.4%;left: 1%;width: 31%;height: 10vw;
+	background: url("../images/scene/scene-kitchen/茶杯.gif") 0 0 /100% 100% no-repeat;
+}
+.scene-kitchen .light {
+	position: absolute;top: 0;left: 37%;width: 33%;height: 28vw;
+	background: url("../images/scene/scene-kitchen/灯.gif") 0 0 /100% 100% no-repeat;
+}
+.scene-kitchen .light-active {
+	display: none;position: absolute;top: 0;left: 0%;width: 100%;height: 80%;
+	background: url("../images/scene/scene-kitchen/灯光@2x.png") 0 0 /100% 100% no-repeat;
+}
+.scene-kitchen .flow {
+	position: absolute;top: 41.2%;left: 8%;width: 23%;height: 8.44%;
+	background: url("../images/scene/scene-kitchen/流水.gif") 0 0 /100% 100% no-repeat;
+}
+.scene-kitchen .bowl-active{
+	position: absolute;top: 24.2%;left: 8%;width: 23%;height: 8.43%;
+	background: url("../images/scene/scene-kitchen/整齐的盘子@2x.png") 0 0 /100% 100% no-repeat;	
+}
+.scene-kitchen .food {
+	position: absolute;bottom: 20%;left: 14%;width: 78%;height: 19%;
+	background: url("../images/scene/scene-kitchen/饭.png") 0 0 /100% 100% no-repeat;
+}
+.scene-kitchen .basket {
+	position: absolute;bottom: 50%;right: 0%;width: 30%;height: 26vw;
+	background: url("../images/scene/scene-kitchen/菜篮子.gif") 0 0 /100% 100% no-repeat;
+}
+.scene-kitchen .word1{
+	position: absolute;top: 50%;left: 4%;width: 74%;height: 4.7%;
+	background: url("../images/scene/scene-kitchen/洗碗文字@2x.png") 0 0/100% 100% no-repeat;
+}
+.scene-kitchen .word2{
+	position: absolute;top: 34%;right: 8%;width: 55%;height: 4.7%;
+	background: url("../images/scene/scene-kitchen/菜篮子文字@2x.png") 0 0/100% 100% no-repeat;
+}
+.scene-kitchen .word3{
+	position: absolute;top: 75%;right: 22%;width: 59%;height: 4.7%;
+	background: url("../images/scene/scene-kitchen/饭菜文字@2x.png") 0 0/100% 100% no-repeat;
+}
+.scene-kitchen .point1{
+	top: 41%;left: 13%;
+}
+.scene-kitchen .point2{
+	top: 42%;left: 78%;
+}
+.scene-kitchen .point3{
+	top: 74%;left: 82%;
+}
+.scene-kitchen .touch1{
+	position: absolute;bottom: 50%;left: 5%;width: 27%;height: 10%;
+}
+.scene-kitchen .touch2{
+	position: absolute;bottom: 50%;right: 4%;width: 26%;height: 13%;
+}
+.scene-kitchen .touch3{
+	position: absolute;bottom: 20%;right: 7%;width: 76%;height: 18%;
+}
+.scene-kitchen-scene1{
+	background: url("../images/detailPage/scene-kitchen/厨房-0.2S一帧/1.jpg") 0 0/100% 100% no-repeat;
+	-webkit-animation: scene-kitchen-scene1 0.6s steps(1) 0.2s infinite both;;
+	animation: scene-kitchen-scene1 0.6s steps(1) 0.2s infinite both;
+}
+.scene-kitchen-scene1 .foreground{
+	padding: 11% 6%;
+	background: url("../images/detailPage/scene-kitchen/厨房-0.2S一帧/1.jpg") 0 0/100% 100% no-repeat;
+	-webkit-animation: scene-kitchen-scene1 0.6s steps(1) infinite both;;
+	animation: scene-kitchen-scene1 0.6s steps(1) infinite both;
+}
+@-webkit-keyframes scene-kitchen-scene1 {
+	0%,100% {background-image: url("../images/detailPage/scene-kitchen/厨房-0.2S一帧/1.jpg");}
+	33% {background-image: url("../images/detailPage/scene-kitchen/厨房-0.2S一帧/2.jpg");}
+	66% {background-image: url("../images/detailPage/scene-kitchen/厨房-0.2S一帧/3.jpg");}
+}
+@keyframes scene-kitchen-scene1 {
+	0%,100% {background-image: url("../images/detailPage/scene-kitchen/厨房-0.2S一帧/1.jpg");}
+	33% {background-image: url("../images/detailPage/scene-kitchen/厨房-0.2S一帧/2.jpg");}
+	66% {background-image: url("../images/detailPage/scene-kitchen/厨房-0.2S一帧/3.jpg");}
+}
+.scene-kitchen-scene1 p{
+	color: #ba5910;
+}
+
+.scene-kitchen-scene2{
+	background: url("../images/detailPage/scene-kitchen/买菜-0.15S一帧/1.jpg") 0 0/100% 100% no-repeat;
+	-webkit-animation: scene-kitchen-scene2 0.75s steps(1) 0.15s infinite both;;
+	animation: scene-kitchen-scene2 0.75s steps(1) 0.15s infinite both;
+}
+.scene-kitchen-scene2 .foreground{
+    padding: 76vh 4% 0;
+	background: url("../images/detailPage/scene-kitchen/买菜-0.15S一帧/1.jpg") 0 0/100% 100% no-repeat;
+	-webkit-animation: scene-kitchen-scene2 0.75s steps(1) infinite both;;
+	animation: scene-kitchen-scene2 0.75s steps(1) infinite both;
+}
+@-webkit-keyframes scene-kitchen-scene2 {
+	0%,100% {background-image: url("../images/detailPage/scene-kitchen/买菜-0.15S一帧/1.jpg");}
+	20% {background-image: url("../images/detailPage/scene-kitchen/买菜-0.15S一帧/2.jpg");}
+	40% {background-image: url("../images/detailPage/scene-kitchen/买菜-0.15S一帧/3.jpg");}
+	60% {background-image: url("../images/detailPage/scene-kitchen/买菜-0.15S一帧/4.jpg");}
+	80% {background-image: url("../images/detailPage/scene-kitchen/买菜-0.15S一帧/5.jpg");}
+}
+@keyframes scene-kitchen-scene2 {
+	0%,100% {background-image: url("../images/detailPage/scene-kitchen/买菜-0.15S一帧/1.jpg");}
+	20% {background-image: url("../images/detailPage/scene-kitchen/买菜-0.15S一帧/2.jpg");}
+	40% {background-image: url("../images/detailPage/scene-kitchen/买菜-0.15S一帧/3.jpg");}
+	60% {background-image: url("../images/detailPage/scene-kitchen/买菜-0.15S一帧/4.jpg");}
+	80% {background-image: url("../images/detailPage/scene-kitchen/买菜-0.15S一帧/5.jpg");}
+}
+.scene-kitchen-scene2 p{
+	color: #14202c;
+}
+
+.scene-kitchen-scene3{
+	background: url("../images/detailPage/scene-kitchen/饭桌-0.3S一帧/1.jpg") 0 0/100% 100% no-repeat;
+	-webkit-animation: scene-kitchen-scene3 1.8s steps(1) 0.3s infinite both;;
+	animation: scene-kitchen-scene3 1.8s steps(1) 0.3s infinite both;
+}
+.scene-kitchen-scene3 .foreground{
+    padding: 12% 0 0 7%;
+	background: url("../images/detailPage/scene-kitchen/饭桌-0.3S一帧/1.jpg") 0 0/100% 100% no-repeat;
+	-webkit-animation: scene-kitchen-scene3 1.8s steps(1) infinite both;;
+	animation: scene-kitchen-scene3 1.8s steps(1) infinite both;
+}
+@-webkit-keyframes scene-kitchen-scene3 {
+	0%,100% {background-image: url("../images/detailPage/scene-kitchen/饭桌-0.3S一帧/1.jpg");}
+	16% {background-image: url("../images/detailPage/scene-kitchen/饭桌-0.3S一帧/2.jpg");}
+	33% {background-image: url("../images/detailPage/scene-kitchen/饭桌-0.3S一帧/3.jpg");}
+	50% {background-image: url("../images/detailPage/scene-kitchen/饭桌-0.3S一帧/4.jpg");}
+	66% {background-image: url("../images/detailPage/scene-kitchen/饭桌-0.3S一帧/5.jpg");}
+	83% {background-image: url("../images/detailPage/scene-kitchen/饭桌-0.3S一帧/6.jpg");}
+}
+@keyframes scene-kitchen-scene3 {
+	0%,100% {background-image: url("../images/detailPage/scene-kitchen/饭桌-0.3S一帧/1.jpg");}
+	16% {background-image: url("../images/detailPage/scene-kitchen/饭桌-0.3S一帧/2.jpg");}
+	33% {background-image: url("../images/detailPage/scene-kitchen/饭桌-0.3S一帧/3.jpg");}
+	50% {background-image: url("../images/detailPage/scene-kitchen/饭桌-0.3S一帧/4.jpg");}
+	66% {background-image: url("../images/detailPage/scene-kitchen/饭桌-0.3S一帧/5.jpg");}
+	83% {background-image: url("../images/detailPage/scene-kitchen/饭桌-0.3S一帧/6.jpg");}
+}
+.scene-kitchen-scene3 p{
+	color: #f8e795;
+}
+
+/*场景3: 卧室*/
+.scene-bedroom {
+	/*background: url("../images/scene/5卧室.jpg") 0 0/100% 100% no-repeat;*/
+}
+.scene-bedroom .sky{
+	position: absolute;top: 13%;right: 14%;width: 52%;height: 62.4%;
+	background: url("../images/scene/scene-bedroom/后背景@2x.png") 0 0/100% 100% no-repeat;
+}
+.scene-bedroom .clothes{
+	position: absolute;top: 20%;right: 17%;width: 46%;height: 24vw;
+	background: url("../images/scene/scene-bedroom/晒衣服.gif") 0 0/100% 100% no-repeat;
+}
+.scene-bedroom .bg{
+	position: absolute;top: 0;left: 0;width: 100%;height: 100%;
+	background: url("../images/scene/scene-bedroom/bg.png") 0 0/100% 100% no-repeat;
+}
+.scene-bedroom .bed{
+	position: absolute;bottom: 5%;left: 0;width: 41%;height: 45%;
+	background: url("../images/scene/scene-bedroom/床.gif") 0 0/100% 100% no-repeat;
+}
+.scene-bedroom .shelf{
+	position: absolute;bottom: 57%;left: 0;width: 27%;height: 21vw;
+	background: url("../images/scene/scene-bedroom/置物架.gif") 0 0/100% 100% no-repeat;
+}
+.scene-bedroom .plant{
+	position: absolute;bottom: 20%;right: 0;width: 24%;height: 67%;
+	background: url("../images/scene/scene-bedroom/植物@2x.png") 0 0/100% 100% no-repeat;
+}
+.scene-bedroom .clock{
+	position: absolute;bottom: 37%;left: 25%;width: 16%;height: 14vw;
+	background: url("../images/scene/scene-bedroom/闹钟.gif") 0 0/100% 100% no-repeat;
+}
+.scene-bedroom .clock-active{
+	position: absolute;bottom: 37.5%;left: 28%;width: 12%;height: 12.5vw;
+	background: url("../images/scene/scene-bedroom/闹钟.png") 0 0/100% 100% no-repeat;
+}
+.scene-bedroom .basket{
+	position: absolute;bottom: 12%;right: 8%;width: 31%;height: 29vw;
+	background: url("../images/scene/scene-bedroom/洗衣篮.gif") 0 0/100% 100% no-repeat;
+}
+.scene-bedroom .word1{
+	position: absolute;top: 57%;left: 45%;width: 52%;height: 4%;
+	background: url("../images/scene/scene-bedroom/闹钟文字@2x.png") 0 0/100% 100% no-repeat;
+}
+.scene-bedroom .word2{
+	position: absolute;top: 27%;right: 45%;width: 52%;height: 4%;
+	background: url("../images/scene/scene-bedroom/晒衣服文字@2x.png") 0 0/100% 100% no-repeat;
+}
+.scene-bedroom .word3{
+	position: absolute;top: 80%;right: 30%;width: 48%;height: 4%;
+	background: url("../images/scene/scene-bedroom/叠衣服文字@2x.png") 0 0/100% 100% no-repeat;
+}
+.scene-bedroom .point1{
+	top: 55%;left: 26%;
+}
+.scene-bedroom .point2{
+	top: 26%;left: 59%;
+}
+.scene-bedroom .point3{
+	top: 79%;left: 71%;
+}
+.scene-bedroom .touch1{
+	position: absolute;bottom: 37%;right: 59%;width: 15%;height: 9%;
+}
+.scene-bedroom .touch2{
+	position: absolute;bottom: 66%;left: 42%;width: 35%;height: 14%;
+}
+.scene-bedroom .touch3{
+	position: absolute;top: 72%;right: 8%;width: 31%;height: 16%;
+}
+.scene-bedroom-scene1{
+	background: url("../images/detailPage/scene-bedroom/起床-0.15S一帧/1.jpg") 0 0/100% 100% no-repeat;
+	-webkit-animation: scene-bedroom-scene1 1.35s steps(1) 0.15s infinite both;;
+	animation: scene-bedroom-scene1 1.35s steps(1) 0.15s infinite both;
+}
+.scene-bedroom-scene1 .foreground{
+    padding: 12% 6%;
+	background: url("../images/detailPage/scene-bedroom/起床-0.15S一帧/1.jpg") 0 0/100% 100% no-repeat;
+	-webkit-animation: scene-bedroom-scene1 1.35s steps(1) infinite both;;
+	animation: scene-bedroom-scene1 1.35s steps(1) infinite both;
+}
+@-webkit-keyframes scene-bedroom-scene1 {
+	0%,100% {background-image: url("../images/detailPage/scene-bedroom/起床-0.15S一帧/1.jpg");}
+	11%,33%,55% {background-image: url("../images/detailPage/scene-bedroom/起床-0.15S一帧/2.jpg");}
+	22%,44%,66% {background-image: url("../images/detailPage/scene-bedroom/起床-0.15S一帧/3.jpg");}
+	77%,88% {background-image: url("../images/detailPage/scene-bedroom/起床-0.15S一帧/4.jpg");}
+}
+@keyframes scene-bedroom-scene1 {
+	0%,100% {background-image: url("../images/detailPage/scene-bedroom/起床-0.15S一帧/1.jpg");}
+	11%,33%,55% {background-image: url("../images/detailPage/scene-bedroom/起床-0.15S一帧/2.jpg");}
+	22%,44%,66% {background-image: url("../images/detailPage/scene-bedroom/起床-0.15S一帧/3.jpg");}
+	77%,88% {background-image: url("../images/detailPage/scene-bedroom/起床-0.15S一帧/4.jpg");}
+}
+.scene-bedroom-scene1 p{
+	color: #703e00;
+}
+
+.scene-bedroom-scene2{
+	background: url("../images/detailPage/scene-bedroom/晒衣服-0.25S一帧/1.jpg") 0 0/100% 100% no-repeat;
+	-webkit-animation: scene-bedroom-scene2 1s steps(1) 0.25s infinite both;;
+	animation: scene-bedroom-scene2 1s steps(1) 0.25s infinite both;
+}
+.scene-bedroom-scene2 .foreground{
+	padding: 12% 6%;
+	background: url("../images/detailPage/scene-bedroom/晒衣服-0.25S一帧/1.jpg") 0 0/100% 100% no-repeat;
+	-webkit-animation: scene-bedroom-scene2 1s steps(1) infinite both;;
+	animation: scene-bedroom-scene2 1s steps(1) infinite both;
+}
+@-webkit-keyframes scene-bedroom-scene2 {
+	0%,100% {background-image: url("../images/detailPage/scene-bedroom/晒衣服-0.25S一帧/1.jpg");}
+	25% {background-image: url("../images/detailPage/scene-bedroom/晒衣服-0.25S一帧/2.jpg");}
+	50% {background-image: url("../images/detailPage/scene-bedroom/晒衣服-0.25S一帧/3.jpg");}
+	75% {background-image: url("../images/detailPage/scene-bedroom/晒衣服-0.25S一帧/4.jpg");}
+}
+@keyframes scene-bedroom-scene2 {
+	0%,100% {background-image: url("../images/detailPage/scene-bedroom/晒衣服-0.25S一帧/1.jpg");}
+	25% {background-image: url("../images/detailPage/scene-bedroom/晒衣服-0.25S一帧/2.jpg");}
+	50% {background-image: url("../images/detailPage/scene-bedroom/晒衣服-0.25S一帧/3.jpg");}
+	75% {background-image: url("../images/detailPage/scene-bedroom/晒衣服-0.25S一帧/4.jpg");}
+}
+.scene-bedroom-scene2 p{
+	color: #287d5d;
+}
+
+.scene-bedroom-scene3{
+	background: url("../images/detailPage/scene-bedroom/叠衣服-0.2S一帧/1.jpg") 0 0/100% 100% no-repeat;
+	-webkit-animation: scene-bedroom-scene3 0.6s steps(1) 0.2s infinite both;;
+	animation: scene-bedroom-scene3 0.6s steps(1) 0.2s infinite both;
+}
+.scene-bedroom-scene3 .foreground{
+	padding: 20% 0 0 6%;
+	background: url("../images/detailPage/scene-bedroom/叠衣服-0.2S一帧/1.jpg") 0 0/100% 100% no-repeat;
+	-webkit-animation: scene-bedroom-scene3 0.6s steps(1) infinite both;;
+	animation: scene-bedroom-scene3 0.6s steps(1) infinite both;
+}
+@-webkit-keyframes scene-bedroom-scene3 {
+	0%,100% {background-image: url("../images/detailPage/scene-bedroom/叠衣服-0.2S一帧/1.jpg");}
+	33% {background-image: url("../images/detailPage/scene-bedroom/叠衣服-0.2S一帧/2.jpg");}
+	66% {background-image: url("../images/detailPage/scene-bedroom/叠衣服-0.2S一帧/3.jpg");}
+}
+@keyframes scene-bedroom-scene3 {
+	0%,100% {background-image: url("../images/detailPage/scene-bedroom/叠衣服-0.2S一帧/1.jpg");}
+	33% {background-image: url("../images/detailPage/scene-bedroom/叠衣服-0.2S一帧/2.jpg");}
+	66% {background-image: url("../images/detailPage/scene-bedroom/叠衣服-0.2S一帧/3.jpg");}
+}
+.scene-bedroom-scene3 p{
+	color: #b37c6f;
+}
+
+/*场景4: 最后*/
+#scene-total {
+	position: relative;
+	background: url("../images/scene/enter-age/bg.jpg") 0 0/100% 100% no-repeat;
+}
+#scene-total .heart {
+	margin-top: 59%;width: 100%;height: 45%;box-sizing: border-box;opacity: 0;
+	background: url("../images/scene/scene-total/爱心.gif") 0 0/100% 100% no-repeat;
+}
+#share {
+    display: block;margin: 4% auto;width: 63%;height: 9%;border: none;box-sizing: border-box;outline: none;
+	background: url("../images/scene/scene-total/分担按钮.png") 0 0/100% 100% no-repeat;
+}
+#scene-total .fp-tableCell {
+	padding: 1px;
+}
+#scene-total .artical {
+	position: absolute;top: 6.5%;width: 100%;
+}
+#scene-total p{
+    margin: 0;font-family: "汉仪小麦简";font-size: 6vw;line-height: 1.3em;text-align: center;color: #c06033;opacity: 0;
+}
+	/*总结屏 文字一行一行入场动画*/
+#scene-total p.active{
+    -webkit-animation: fadeIn 0.7s ease-out both;animation: fadeIn 0.7s ease-out both;
+}
+#scene-total p:nth-child(2){
+	-webkit-animation-delay: 1s;
+}
+#scene-total p:nth-child(3){
+	-webkit-animation-delay: 2s;
+}
+#scene-total p:nth-child(4){
+	-webkit-animation-delay: 3s;
+}
+#scene-total p:nth-child(5){
+	-webkit-animation-delay: 4s;
+}
+	/*视频*/
+.video-box {
+	position: absolute;top: 39%;left: 3%;width: 94%;
+}
+#video {
+    display: none;width: 100%;opacity: 0;
+}
+.video-box .poster{
+	display: none;position: absolute;top: 0;left: 0;bottom: 0;right: 0;
+	background: url(../images/video/poster.jpg) 50% 50%/100% 100% no-repeat;
+}
+	/*分享遮罩*/
+.share{
+	display: none;position: fixed;z-index: 9;top: 0;left: 0;bottom: 0;right: 0;
+	background: #eedcc3;opacity: 0.8;
+}
+.share-heart {
+	display: none;position: fixed;z-index: 9;top: 0;right: 0;width: 24%;height: 48%;
+	background: url(../images/scene/scene-total/分享妈妈的爱.gif) 0 0/100% 100% no-repeat;
+}
+
+/*DetailPage css*/
+#DetailPage span{
+	color: #ee2636;font-size: 8.5vw;
+}
+#DetailPage p{
+	-webkit-animation: fadeIn 0.7s ease-out both;animation: fadeIn 0.7s ease-out both;
+    letter-spacing: -0.1vw;
+}
+
+@-webkit-keyframes fadeIn {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+@keyframes fadeIn {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+#DetailPage .gesture{
+    position: absolute;bottom: 2%;right: 37%;width: 19%;height: 19vw;
+    background: url("../images/detailPage/手势.gif") 50% 50%/100% 100% no-repeat;
+}
