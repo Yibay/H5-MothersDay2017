@@ -43,6 +43,11 @@ music.water_closed = false;
 music.water.addEventListener("ended",function(){
     music.water.play();
 });
+music.waterPlay = function(){
+    if(!this.water_closed){
+        music.water.play();
+    }
+};
 
 //猫叫
 music.cat = new Audio("http://hugehuge.oss-cn-hangzhou.aliyuncs.com/static/H5Resource/motherday2017/music/猫叫.mp3");

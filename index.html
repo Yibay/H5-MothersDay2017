@@ -361,23 +361,24 @@
 	$(".scene-kitchen .touch1").on("click", function(){
 		renderDetailPage(["每一次的洗刷<br/>都是对家人的保护",[data.kitchen_point1[0],"年，妈妈清洗",data.kitchen_point1[1],"双碗筷，"],["这花费了她",data.kitchen_point1[2],"小时！"]], 
 			"scene-kitchen-scene1", 
-			changeScenne([$(".scene-kitchen .point1-hide")], [$(".scene-kitchen .point1-show")],function(){music.wash.play();}),
-			function(){music.wash.pause();music.water_closed = true;music.water.pause();}
+			changeScenne([$(".scene-kitchen .point1-hide")], [$(".scene-kitchen .point1-show")],function(){music.wash.play();music.water.pause();}),
+			function(){music.wash.pause();music.water_closed = true;music.waterPlay();}
 		);
 	});
 
 	$(".scene-kitchen .touch2").on("click", function(){
 		renderDetailPage(["风雨无阻，<br/>去菜场的这条路很短却很孤单",[data.kitchen_point2[0],"年，妈妈买菜走过的路程超过",data.kitchen_point2[1],"公里，"],["这花费了她",data.kitchen_point2[2],"小时"]], 
 			"scene-kitchen-scene2", 
-			changeScenne([$(".scene-kitchen .point2-hide")], [$(".scene-kitchen .point2-show")], function(){music.rain.play();}),
-			function(){music.rain.pause();}
+			changeScenne([$(".scene-kitchen .point2-hide")], [$(".scene-kitchen .point2-show")], function(){music.rain.play();music.water.pause();}),
+			function(){music.rain.pause();music.waterPlay();}
 		);
 	});
 
 	$(".scene-kitchen .touch3").on("click", function(){
 		renderDetailPage(["每次回家，<br/>最隆重的爱就是满满的一桌子饭菜。",[data.kitchen_point3[0],"年，妈妈做了超过",data.kitchen_point3[1],"顿饭，"],["这花费了她",data.kitchen_point3[2],"小时"]], 
 			"scene-kitchen-scene3", 
-			changeScenne([$(".scene-kitchen .point3-hide")], [$(".scene-kitchen .point3-show")])
+			changeScenne([$(".scene-kitchen .point3-hide")], [$(".scene-kitchen .point3-show")], function(){music.water.pause();}),
+			function(){music.waterPlay();}
 		);
 	});
 

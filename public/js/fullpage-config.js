@@ -31,9 +31,7 @@ function initFullpage(){
 			}
 			// 第2页 控制
 			if(nextIndex === 2){
-				if(!music.water_closed){
-					music.water.play();
-				}
+				music.waterPlay();
 			}
 			else{
 				music.water.pause();
